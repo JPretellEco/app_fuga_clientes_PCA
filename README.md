@@ -23,4 +23,3 @@
 
 ---
 
-¿Deseas este diccionario en formato Markdown, LaTeX, Excel o directamente insertado en un informe en Word o PDF?
