@@ -3,15 +3,13 @@ import numpy as np
 import pandas as pd
 import joblib
 
-# Cargar modelo y escalador
-modelo = joblib.load('modelo_logistic_regression.pkl')
-scaler = joblib.load('scaler_final.pkl')
+# Cargar modelo y escalador con la ruta relativa correcta
+modelo = joblib.load(os.path.join("src", "modelo_logistic_regression.pkl"))
+scaler = joblib.load(os.path.join("src", "scaler_final.pkl"))
 
-# Configuración inicial
 st.set_page_config(page_title="Predicción de Fuga de Clientes", page_icon="📉")
 st.title("📱 Predicción de Fuga en Clientes de Telecomunicaciones")
-st.markdown("Completa la información del cliente para estimar su probabilidad de fuga.")
-
+st.markdown("Ingresa los valores del cliente para estimar la probabilidad de fuga.")
 st.markdown("---")
 
 # Distribución en columnas
