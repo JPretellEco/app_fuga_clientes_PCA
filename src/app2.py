@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import joblib
+import os
+
 
 # Cargar modelo y escalador con la ruta relativa correcta
 modelo = joblib.load(os.path.join("src", "modelo_logistic_regression.pkl"))
