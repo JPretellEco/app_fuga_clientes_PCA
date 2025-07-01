@@ -1,4 +1,6 @@
+# 📱 Predicción de Fuga de Clientes en Telecomunicaciones
 
+Este proyecto busca predecir la probabilidad de que un cliente de telecomunicaciones abandone la empresa, utilizando técnicas de análisis de datos, ingeniería de características, selección de variables, modelado y despliegue web con Streamlit.
 
 ---
 
@@ -22,4 +24,73 @@
 | Fuga                       | Etiqueta de clase (1: cliente se fue, 0: cliente se mantiene)                                                                          |
 
 ---
+
+## 🔍 Objetivo
+
+Identificar con anticipación a los clientes con mayor riesgo de fuga para tomar decisiones preventivas y mejorar la retención. El modelo está basado en comportamiento de uso, quejas y características del servicio.
+
+---
+
+## 🧠 Tecnologías utilizadas
+
+- Python 3
+- Pandas, NumPy, Matplotlib, Seaborn
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+- Streamlit
+- Joblib
+- Git + GitHub
+
+---
+
+## ⚙️ Flujo del proyecto
+
+### 1. Exploración y limpieza de datos
+- Se eliminaron duplicados y se trató con valores extremos usando IQR (winsorización).
+- Se cambiaron nombres de columnas para mejor comprensión.
+- Se revisaron estadísticas y se visualizaron los datos.
+
+### 2. Ingeniería de características
+Se generaron nuevas variables a partir de las existentes:
+- `fallas_por_mes`
+- `llamadas_al_día`
+- `sms_al_día`
+- `quejas_por_mes`
+> Esto permitió captar mejor el comportamiento de los clientes.
+
+### 3. Selección de variables
+Se aplicó `RFECV` con regresión logística para elegir las variables más importantes.  
+Las seleccionadas fueron:
+- Falla de Llamada  
+- Monto Cobrado  
+- Segundos de Uso  
+- Frecuencia de Uso  
+- sms_al_día  
+- quejas_por_mes
+
+### 4. Modelado
+- División en datos de entrenamiento y prueba (`train_test_split`).
+- Balanceo de clases con **SMOTE**.
+- Normalización con `StandardScaler`.
+- Modelo final: **Regresión Logística**.
+- Métricas obtenidas: Accuracy, Precision, Recall.
+
+### 5. Despliegue con Streamlit
+- Se creó una aplicación web donde el usuario puede ingresar los datos de un cliente usando sliders.
+- La app devuelve la **probabilidad de fuga** y una alerta según el nivel de riesgo.
+
+---
+
+## 🖥️ Cómo usar la app
+
+✅ Puedes acceder a la app desde este enlace:  
+👉 [https://jpretell66-streamlit-app-url](https://jpretell66-streamlit-app-url) ← *(Reemplázalo con tu enlace real)*
+
+O también puedes correrla localmente:
+
+```bash
+git clone https://github.com/JPretellEco/app_fuga_clientes_PCA.git
+cd app_fuga_clientes_PCA/src
+streamlit run app2.py
+
 
