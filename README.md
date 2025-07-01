@@ -79,18 +79,3 @@ Las seleccionadas fueron:
 - Se creó una aplicación web donde el usuario puede ingresar los datos de un cliente usando sliders.
 - La app devuelve la **probabilidad de fuga** y una alerta según el nivel de riesgo.
 
----
-
-## 🖥️ Cómo usar la app
-
-✅ Puedes acceder a la app desde este enlace:  
-👉 [https://jpretell66-streamlit-app-url](https://jpretell66-streamlit-app-url) ← *(Reemplázalo con tu enlace real)*
-
-O también puedes correrla localmente:
-
-```bash
-git clone https://github.com/JPretellEco/app_fuga_clientes_PCA.git
-cd app_fuga_clientes_PCA/src
-streamlit run app2.py
-
-
