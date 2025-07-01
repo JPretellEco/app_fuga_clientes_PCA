@@ -1,4 +1,4 @@
-Por supuesto, Jeffersson. Aquí tienes el **diccionario de datos traducido al español**, manteniendo la estructura clara y profesional:
+
 
 ---
 
